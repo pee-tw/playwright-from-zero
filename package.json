@@ -1,0 +1,24 @@
+{
+  "name": "playwright-from-zero",
+  "version": "1.0.0",
+  "description": "Playwright from zero workshop",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pee-tw/playwright-from-zero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pee-tw/playwright-from-zero/issues"
+  },
+  "homepage": "https://github.com/pee-tw/playwright-from-zero#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.7"
+  }
+}
