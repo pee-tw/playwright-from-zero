@@ -8,10 +8,12 @@ test("has title", async ({ page }) => {
   await expect(page).toHaveTitle(/PyCon Thailand 2023/);
 });
 
-test("should see Buy Ticket", async ({ page }) => {
+test("should buy ticket navigates to eventpop", async ({ page }) => {
   await page.goto("https://th.pycon.org/");
 
-  await expect(page.getByRole("button", { name: "Buy Ticket" })).toBeVisible();
+  await page.getByRole("button", { name: "Buy Ticket" }).click();
+  await expect(page.url()).toBe("https://www.eventpop.me/e/15840");
+  await expect(page.getByRole("link", { name: "Get Tickets" })).toBeVisible();
 });
 
 test("should have Pee and Bumbim", async ({ page }) => {
