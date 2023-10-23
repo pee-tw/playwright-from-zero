@@ -4,7 +4,9 @@
   "description": "Playwright from zero workshop",
   "main": "index.js",
   "scripts": {
-    "dev": "npx playwright test --ui"
+    "dev": "npx playwright test --ui",
+    "test": "npx playwright test",
+    "update-snapshot": "npx playwright test --update-snapshots"
   },
   "repository": {
     "type": "git",

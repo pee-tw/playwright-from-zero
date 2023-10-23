@@ -1,0 +1,30 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <input id="inputEcho" type="text" placeholder="Type something here" />
+	  <!-- style="font-family: Roboto" -->
+      <h1></h1>
+    </main>
+    <Footer />
+  </body><script>
+    const input = document.getElementById("inputEcho");
+    const h1 = document.querySelector("h1");
+
+    input?.addEventListener("input", (e) => {
+      const { value } = e.target as HTMLInputElement;
+      if (h1) h1.innerHTML = "Hello " + value;
+    });
+  </script>
+</html>
